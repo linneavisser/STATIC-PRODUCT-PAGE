@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+/* PRODUCT LIST */
+
+.productList main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
+  gap: 3rem;
+}
+.productList main h1 {
+  grid-column: 1/-1;
+}
+.productImage {
+  position: relative;
+  width: 100%;
+}
+.productImage img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+.productImage:hover img {
+  opacity: 0.2;
+}
+.textOverlay {
+  position: absolute;
+  top: 60%;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.productImage:hover .textOverlay {
+  opacity: 1;
+}
