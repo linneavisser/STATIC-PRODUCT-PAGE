@@ -7,7 +7,11 @@
 body {
   margin: 2rem;
   font-family: "Roboto", sans-serif;
+
+  display: grid;
+  grid-template-columns: 15% 1fr;
 }
+
 a {
   text-decoration: none;
   color: black;
@@ -18,11 +22,17 @@ ol {
 }
 
 /* PRODUCT LIST */
+.productList {
+  display: grid;
+  grid-template-columns: 15% 1fr;
+}
 
 .productList main {
+  grid-column: 2/3;
+  grid-row: 2;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 250px));
+  gap: 4rem;
 }
 .productList main h1 {
   grid-column: 1/-1;
@@ -44,12 +54,73 @@ ol {
 }
 .textOverlay {
   position: absolute;
-  top: 60%;
+  top: 0%;
   height: 100%;
   width: 100%;
   opacity: 0;
   transition: 0.5s ease;
 }
+.textOverlay h3 {
+  padding-bottom: 1rem;
+}
 .productImage:hover .textOverlay {
   opacity: 1;
+}
+
+/* PRODUCT PAGE */
+
+.productPage img {
+  padding-top: 5rem;
+  display: block;
+  margin-right: 5rem;
+  max-width: 100%;
+}
+.productPage {
+  display: flex;
+  flex-direction: column;
+}
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+dt {
+  font-weight: bold;
+  padding-top: 0.7rem;
+  padding-bottom: 0.1rem;
+}
+form {
+  display: flex;
+  gap: 1rem;
+}
+form h4 {
+  font-weight: bold;
+}
+select {
+  width: 50px;
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  border: none;
+  margin-left: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+button:hover {
+  color: rgba(0, 0, 0, 0.527);
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 1024px) {
+  .productPage img {
+    width: 40%;
+    padding-top: 2rem;
+  }
+  .productPage {
+    flex-direction: row;
+  }
 }
