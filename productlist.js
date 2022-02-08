@@ -34,6 +34,17 @@ function showProduct(product) {
   if (product.soldout) {
     copy.querySelector("article").classList.add("soldOut");
   }
+  if (product.discount) {
+    copy.querySelector("article").classList.add("onSale");
+    copy.querySelector(".price").classList.add("discount");
+  }
+  copy.querySelector(".discountPrice p").textContent = `DKK ${Math.round(
+    (1 - product.discount / 100) * product.price
+  )}`;
+  copy.querySelector(
+    ".discountPrice p:nth-child(2)"
+  ).textContent = `${product.discount} %`;
+
   //parent
   const parent = document.querySelector("main");
   //append

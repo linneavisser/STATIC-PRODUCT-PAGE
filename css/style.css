@@ -69,6 +69,8 @@ li:hover {
 }
 .textOverlay h3 {
   padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
 }
 .productImage:hover .textOverlay {
   opacity: 1;
@@ -85,13 +87,8 @@ li:hover {
 .productList article.onSale p.discount {
   text-decoration: line-through;
 }
-.productList article .soldOutBox {
-  display: none;
-}
-.productList article.soldOut .soldOutBox {
-  display: initial;
-}
-.soldOutBox {
+article.soldOut::before {
+  content: "SOLD OUT";
   position: absolute;
   right: 0rem;
   bottom: 4rem;
