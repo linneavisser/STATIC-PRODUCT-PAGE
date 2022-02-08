@@ -72,21 +72,34 @@ li:hover {
   padding-top: 0.5rem;
   padding-left: 0.5rem;
 }
+.textOverlay p.price,
+.textOverlay .discountPrice {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
 .productImage:hover .textOverlay {
   opacity: 1;
 }
+
+/* SOLD OUT ON SALE */
+
 .productList article .price .discount,
-.productList article .discountPrice {
+.productList article .discountPrice,
+.productPage section.infoBox .discountPrice,
+.productPage section.infoBox .price .discount {
   display: none;
 }
-.productList article.onSale .discountPrice {
+.productList article.onSale .discountPrice,
+.productPage section.infoBox.onSale .discountPrice {
   display: flex;
   justify-content: space-between;
   color: rgb(228, 0, 0);
 }
-.productList article.onSale p.discount {
+.productList article.onSale p.discount,
+.productPage section.infoBox.onSale p.price.discount {
   text-decoration: line-through;
 }
+
 article.soldOut::before {
   content: "SOLD OUT";
   position: absolute;
@@ -95,6 +108,7 @@ article.soldOut::before {
   background-color: #e0e0e0da;
   padding: 0.5rem;
   font-weight: bold;
+  z-index: 100;
 }
 
 /* PRODUCT PAGE */
@@ -114,6 +128,9 @@ article.soldOut::before {
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
+}
+.title {
+  padding-top: 2rem;
 }
 dt {
   font-weight: bold;
@@ -152,5 +169,8 @@ button:hover {
   }
   .productPage {
     flex-direction: row;
+  }
+  .productPage .title {
+    padding-top: 0;
   }
 }
