@@ -20,6 +20,7 @@ function handleProductList(data) {
 
 function showProduct(product) {
   console.log(product);
+  document.querySelector("h1.categoryName").textContent = `${product.category}`;
 
   //grab template
   const template = document.querySelector("#productImageTemplate").content;
