@@ -1,4 +1,9 @@
-const url = "https://kea-alt-del.dk/t7/api/products?limit=30";
+const urlParams = new URLSearchParams(window.location.search);
+
+const category = urlParams.get("category");
+
+const url =
+  "https://kea-alt-del.dk/t7/api/products?limit=30&category=" + category;
 
 fetch(url)
   .then(function (response) {

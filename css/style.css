@@ -21,12 +21,16 @@ ol {
 }
 
 /* CATEGORIES */
-.brands h2 {
-  font-size: 2rem;
+.categoryPage main {
+  grid-column: 2;
+  grid-row: 2;
 }
-.brands h2,
-.brands li {
-  padding: 1rem 0rem;
+.categoryPage h1,
+.categoryPage section {
+  padding-top: 1rem;
+}
+.categoryPage section.categories a li {
+  font-weight: bold;
 }
 li:hover {
   text-decoration: underline;

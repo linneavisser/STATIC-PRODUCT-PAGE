@@ -7,7 +7,7 @@
     <title>categories</title>
     <link rel="stylesheet" href="/css/style.css" />
   </head>
-  <body>
+  <body class="categoryPage">
     <header>
       <nav>
         <ul>
@@ -17,15 +17,21 @@
       </nav>
     </header>
     <main>
-      <section class="brands">
-        <h2>A</h2>
-        <ol>
-          <li><a href="productlist.html">artengo.</a></li>
-          <li><a href="productlist.html">artengo.</a></li>
-          <li><a href="productlist.html">artengo.</a></li>
-        </ol>
-      </section>
-      <section class="brands">
+      <h1>Categories</h1>
+      <template id="categoryTemplate">
+        <section class="categories">
+          <ol>
+            <li>
+              <a
+                href="productlist.html?products&category=footwear"
+                class="categoryName"
+                >artengo.</a
+              >
+            </li>
+          </ol>
+        </section>
+      </template>
+      <!--<section class="brands">
         <h2>B</h2>
         <ol>
           <li><a href="productlist.html">boss.</a></li>
@@ -40,8 +46,9 @@
           <li><a href="productlist.html">carhartt.</a></li>
           <li><a href="productlist.html">carhartt.</a></li>
         </ol>
-      </section>
+      </section>-->
     </main>
     <footer></footer>
+    <script src="category.js"></script>
   </body>
 </html>
